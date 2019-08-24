@@ -14,7 +14,7 @@ $ polymer serve
 ```
 or 
 ```
-polymer serve --open
+$ polymer serve --open
 ```
 
 ## Building Your Application
