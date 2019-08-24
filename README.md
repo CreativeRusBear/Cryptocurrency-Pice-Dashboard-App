@@ -1,15 +1,23 @@
-# \<Cryptocurrency-Pice-Dashboard-App\>
+# Cryptocurrency Price Dashboard 
 
-Cryptocurrency Price Dashboard 
+![GitHub top language](https://img.shields.io/github/languages/top/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
 
-## Install the Polymer-CLI
+## Description
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+Application designed to monitor the course of various cryptocurrencies. 
+Created using the Polymer library.
+![application](https://user-images.githubusercontent.com/37180024/63641632-3ceea400-c6ba-11e9-94a2-e0a76972ddb7.png)
 
 ## Viewing Your Application
 
 ```
 $ polymer serve
+```
+or 
+```
+polymer serve --open
 ```
 
 ## Building Your Application
@@ -23,11 +31,3 @@ This will create builds of your application in the `build/` directory, optimized
 ```
 $ polymer serve build/default
 ```
-
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally. [Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) is required. Note that if you do not have the `javac` command installed, you will be promted to install Java 10. To uninstall Java, see the direction [here](https://www.java.com/en/download/help/mac_uninstall_java.xml). See [issue #405 for the status of Java 10 support](https://github.com/Polymer/tools/issues/405).
