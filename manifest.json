@@ -1,0 +1,7 @@
+{
+  "name": "Cryptocurrency-Pice-Dashboard-App",
+  "short_name": "Cryptocurrency-Pice-Dashboard-App",
+  "description": "Cryptocurrency Price Dashboard ",
+  "start_url": "/",
+  "display": "standalone"
+}
