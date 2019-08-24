@@ -1,8 +1,5 @@
 # Cryptocurrency Price Dashboard 
-
-![GitHub top language](https://img.shields.io/github/languages/top/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub top language](https://img.shields.io/github/languages/top/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
 
 ## Description
 
