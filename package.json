@@ -2,9 +2,16 @@
   "name": "Cryptocurrency-Pice-Dashboard-App",
   "description": "Cryptocurrency Price Dashboard ",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0"
+    "@polymer/iron-ajax": "^3.0.1",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-spinner": "^3.0.2",
+    "@polymer/paper-styles": "^3.0.1",
+    "@polymer/polymer": "^3.0.0",
+    "chart.js": "^2.8.0",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.1.0",
     "@polymer/test-fixture": "^4.0.2",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "chai": "^4.2.0",
