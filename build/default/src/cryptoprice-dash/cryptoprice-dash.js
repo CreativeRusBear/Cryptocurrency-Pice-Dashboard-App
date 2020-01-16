@@ -1,3 +1,6 @@
+/**
+ * @version v1.1.0
+ */
 import { PolymerElement, html } from "../../node_modules/@polymer/polymer/polymer-element.js";
 import { afterNextRender } from "../../node_modules/@polymer/polymer/lib/utils/render-status.js";
 import "../../node_modules/@polymer/iron-ajax/iron-ajax.js";
@@ -5,6 +8,13 @@ import "../../node_modules/@polymer/polymer/lib/elements/dom-repeat.js";
 import "../../node_modules/@polymer/paper-spinner/paper-spinner-lite.js";
 import "../../node_modules/@polymer/paper-button/paper-button.js";
 import "../../node_modules/@polymer/paper-styles/typography.js";
+/**
+ * @class
+ * @customElement
+ * @extends {PolymerElement}
+ * @example
+ * <cryptoprice-dash></ryptoprice-dash>
+ */
 
 class CryptopriceDash extends PolymerElement {
   static get template() {
@@ -42,7 +52,10 @@ class CryptopriceDash extends PolymerElement {
                 <div>
                     <dom-repeat items="[[currencies]]">
                         <template>
-                            <paper-button noink on-click="_getCurrencyHistoricData">[[item.name]] -  [[item.price]] RUB</paper-button>
+                            <paper-button 
+                                noink 
+                                on-click="_getCurrencyHistoricData">[[item.name]] -  [[item.price]] RUB
+                            </paper-button>
                         </template>
                     </dom-repeat>
                 </div>
@@ -51,12 +64,16 @@ class CryptopriceDash extends PolymerElement {
                     <canvas id="canvas" width="5" height="3"></canvas>
                 </div>
             </div>
-            
         `;
   }
 
   static get properties() {
     return {
+      /**
+       * @description Сryptocurrencies that reflect statistics
+       * @type Array
+       * @memberOf CryptopriceDash
+       */
       currencies: {
         type: Array,
         value: [{
@@ -73,6 +90,11 @@ class CryptopriceDash extends PolymerElement {
           price: 0
         }]
       },
+
+      /**
+       * @type Boolean
+       * @memberOf CryptopriceDash
+       */
       loading: {
         type: Boolean,
         notify: true,
@@ -90,6 +112,12 @@ class CryptopriceDash extends PolymerElement {
       this._getCurrencyHistoricData(this.currencies[0].code);
     });
   }
+  /**
+   * @method
+   * @description load info about a specific cryptocurrency
+   * @private
+   */
+
 
   _getCurrencyData() {
     const ajax = this.$.coinbase;
@@ -99,6 +127,13 @@ class CryptopriceDash extends PolymerElement {
       ajax.generateRequest();
     });
   }
+  /**
+   * @method
+   * @description load historic info about a specific cryptocurrency
+   * @param {Object} currency - event's object
+   * @private
+   */
+
 
   _getCurrencyHistoricData(currency) {
     if (currency instanceof Event) currency = currency.model.item.code;
@@ -106,21 +141,50 @@ class CryptopriceDash extends PolymerElement {
     ajax.url = `https://api.coinbase.com/v2/prices/${currency}-RUB/historic?period=month`;
     ajax.generateRequest();
   }
+  /**
+   * @method
+   * @description Get response from server
+   * @param {Object} res - response from API
+   * @private
+   */
+
 
   _handleResponse(res) {
     if (res.detail.response.data.amount) this._computeCurrencyPrice(res.detail);else this._computeGraph(res.detail);
   }
+  /**
+   * @method
+   * @description load basic data about cryptocurrencies
+   * @param {HTMLElement} data - <iron-request> component
+   * @private
+   */
+
 
   _computeCurrencyPrice(data) {
-    let code = data.url.substring(35, 38);
-    let index = this.currencies.map(item => item.code).indexOf(code);
-    let cryptoPrice = Number(data.response.data.amount);
+    const code = data.url.substring(35, 38);
+    const index = this.currencies.map(item => item.code).indexOf(code);
+    const cryptoPrice = Number(data.response.data.amount);
     this.set(`currencies.${index}.price`, cryptoPrice.toFixed(2));
   }
+  /**
+   * @method
+   * @description formation of date and time in a human-readable format
+   * @param {String} datestring - date and time
+   * @return {String}
+   * @private
+   */
+
 
   _computeDateTime(datestring) {
     return datestring ? moment(datestring, 'YYYY-MM-DDThh:mm:aaZ').format('LLL') : datestring;
   }
+  /**
+   * @method
+   * @description load full information about a specific cryptocurrency and based on this information generates a chart
+   * @param {HTMLElement} data  - <iron-request> component
+   * @private
+   */
+
 
   _computeGraph(data) {
     let code;
@@ -129,8 +193,8 @@ class CryptopriceDash extends PolymerElement {
         code = item.name;
       }
     });
-    let labels = [];
-    let prices = [];
+    const labels = [];
+    const prices = [];
     data.response.data.prices.forEach(item => {
       labels.push(this._computeDateTime(item.time));
       prices.push(item.price);
@@ -138,10 +202,19 @@ class CryptopriceDash extends PolymerElement {
 
     this._generateLineChart(labels, prices, code);
   }
+  /**
+   * @method
+   * @description Generate chart about a specific cryptocurrency with full information
+   * @param {Array} labels - Dates array
+   * @param {Array} prices - Prices array
+   * @param {String} labelName - Crypto name
+   * @private
+   */
+
 
   _generateLineChart(labels, prices, labelName) {
     if (this.lineChart) this.lineChart.destroy();
-    var ctx = this.$.canvas.getContext('2d');
+    const ctx = this.$.canvas.getContext('2d');
     this.lineChart = new Chart(ctx, {
       type: 'line',
       data: {
@@ -149,8 +222,8 @@ class CryptopriceDash extends PolymerElement {
         datasets: [{
           pointRadius: 0,
           label: labelName,
-          backgroundColor: "rgba(111, 124, 186, 0.1)",
-          borderColor: "rgba(111, 124, 186, 1)",
+          backgroundColor: 'rgba(111, 124, 186, 0.1)',
+          borderColor: 'rgba(111, 124, 186, 1)',
           borderWidth: 2,
           data: prices.reverse()
         }]
@@ -185,4 +258,14 @@ class CryptopriceDash extends PolymerElement {
 
 }
 
-customElements.define('cryptoprice-dash', CryptopriceDash);
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    try {
+      navigator.serviceWorker.register('serviceWorker.js');
+    } catch (e) {
+      console.log('Service Worker Registration Failed');
+    }
+  }
+
+  customElements.define('cryptoprice-dash', CryptopriceDash);
+});
