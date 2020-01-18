@@ -262,15 +262,4 @@ class CryptopriceDash extends PolymerElement {
 	}
 }
 
-window.addEventListener('load', () => {
-
-	if ('serviceWorker' in navigator) {
-		try {
-			navigator.serviceWorker.register('serviceWorker.js');
-		} catch (e) {
-			console.log('Service Worker Registration Failed');
-		}
-	}
-
-	customElements.define('cryptoprice-dash', CryptopriceDash);
-});
+customElements.define('cryptoprice-dash', CryptopriceDash);

@@ -3,7 +3,7 @@
   "description": "Application that displays statistics about various cryptocurrencies",
   "version": "1.1.0",
   "scripts": {
-    "start": "polymer serve --open",
+    "start": "polymer serve -p 3000 --hostname 127.0.0.1 --open",
     "docs": "jsdoc -c jsdoc.json",
     "build": "polymer build",
     "test": "polymer test"
