@@ -1,5 +1,14 @@
 # Cryptocurrency Price Dashboard 
-![GitHub top language](https://img.shields.io/github/languages/top/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub top language](https://img.shields.io/github/languages/top/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) 
+![GitHub repo size](https://img.shields.io/github/repo-size/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) 
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub issues](https://img.shields.io/github/issues/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fcreativerusbear.github.io%2FCryptocurrency-Pice-Dashboard-App%2F)
 
 ## Introduction
 
