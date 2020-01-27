@@ -2,6 +2,7 @@
   "name": "Cryptocurrency-Price-Dashboard-App",
   "description": "Application that displays statistics about various cryptocurrencies",
   "version": "1.1.0",
+  "author": "Artem Gusev <gusev2014russia@mail.ru> (CreativeRusBear)",
   "scripts": {
     "start": "polymer serve -p 3000 --hostname 127.0.0.1 --open",
     "docs": "jsdoc -c jsdoc.json",
@@ -12,13 +13,13 @@
     "customElement",
     "web-component",
     "Polymer",
-    "PWA",
     "JavaScript",
     "Crypto",
     "Cryptocurrency",
     "Chart",
     "Cryptocurrency-Price-Dashboard",
-    "Cryptocurrency-Price-Dashboard-App"
+    "Cryptocurrency-Price-Dashboard-App",
+    "Web Application"
   ],
   "dependencies": {
     "@polymer/iron-ajax": "^3.0.1",

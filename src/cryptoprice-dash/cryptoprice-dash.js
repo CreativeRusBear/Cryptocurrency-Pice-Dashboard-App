@@ -1,5 +1,7 @@
 /**
  * @version v1.1.0
+ * @author Artem Gusev <gusev2014russia@mail.ru> (CreativeRusBear)
+ * @copyright Artem Gusev 2020
  */
 
 import {PolymerElement, html} from '@polymer/polymer/polymer-element';
@@ -178,7 +180,7 @@ class CryptopriceDash extends PolymerElement {
 	 * @method
 	 * @description formation of date and time in a human-readable format
 	 * @param {String} datestring - date and time
-	 * @return {String}
+	 * @return {String} - date and time in a human-readable format
 	 * @private
 	 */
 	_computeDateTime (datestring) {
@@ -187,7 +189,8 @@ class CryptopriceDash extends PolymerElement {
 
 	/**
 	 * @method
-	 * @description load full information about a specific cryptocurrency and based on this information generates a chart
+	 * @description load full information about a specific cryptocurrency and
+	 * based on this information generates a chart
 	 * @param {HTMLElement} data  - <iron-request> component
 	 * @private
 	 */
