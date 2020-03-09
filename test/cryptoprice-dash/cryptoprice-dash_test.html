@@ -24,45 +24,57 @@
 
 <script>
 	suite('cryptoprice-dash', function () {
+		var ajax, request, server, responseHeaders = {
+			json : {'Content-Type' : 'application/json'},
+		};
 
-	    test('testing currencies prop with default values', function () {
-          const customElement = fixture('BasicTestFixture');
-          const isCurrenciesPropArr = customElement.currencies instanceof Array;
-          assert.equal(customElement.currencies.length, 3);
-          assert.equal(isCurrenciesPropArr, true);
+		test('testing lineChart prop', function () {
+			const customElement = fixture('BasicTestFixture');
+			expect(customElement.lineChart).to.be.undefined;
+		});
 
-          assert.equal(customElement.currencies[0].code, 'BTC');
-          assert.equal(customElement.currencies[0].name, 'Bitcoin');
-          assert.equal(customElement.currencies[0].price, 0);
-
-          assert.equal(customElement.currencies[1].code, 'ETH');
-          assert.equal(customElement.currencies[1].name, 'Ethereum');
-          assert.equal(customElement.currencies[1].price, 0);
-
-          assert.equal(customElement.currencies[2].code, 'LTC');
-          assert.equal(customElement.currencies[2].name, 'Litecoin');
-          assert.equal(customElement.currencies[2].price, 0);
-        });
+		test('testing currencies prop with default values', function () {
+			const customElement = fixture('BasicTestFixture');
+			expect(customElement.currencies).to.be.an('array');
+			expect(customElement.currencies).to.have.lengthOf(3);
+			expect(customElement.currencies).to.eql([
+				{
+					code  : 'BTC',
+					name  : 'Bitcoin',
+					price : 0,
+				},
+				{
+					code  : 'ETH',
+					name  : 'Ethereum',
+					price : 0,
+				},
+				{
+					code  : 'LTC',
+					name  : 'Litecoin',
+					price : 0,
+				},
+			]);
+		});
 
 		test('testing loading prop with default value', function () {
-            const customElement = fixture('BasicTestFixture');
+			const customElement = fixture('BasicTestFixture');
 			assert.equal(customElement.loading, false);
 		});
 
 
 		test('testing base ui values and state', function () {
-          const customElement = fixture('BasicTestFixture');
-          const elementShadowRoot = customElement.shadowRoot;
+			const customElement = fixture('BasicTestFixture');
+			const elementShadowRoot = customElement.shadowRoot;
 
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Cryptocurrency Price Dash');
+			const elementHeader = elementShadowRoot.querySelector('h2');
+			assert.equal(elementHeader.innerHTML, 'Cryptocurrency Price Dash');
 
-          const spinner = elementShadowRoot.querySelector('paper-spinner-lite');
-          assert.equal(spinner.active, false);
+			const spinner = elementShadowRoot.querySelector('paper-spinner-lite');
+			assert.equal(spinner.active, false);
 
-          const container = elementShadowRoot.querySelector('.container');
-          assert.equal(container.hidden, false);
-        });
+			const container = elementShadowRoot.querySelector('.container');
+			assert.equal(container.hidden, false);
+		});
 	});
 </script>
 </body>
