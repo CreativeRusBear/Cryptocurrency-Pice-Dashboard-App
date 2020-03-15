@@ -3,7 +3,6 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) 
 ![GitHub repo size](https://img.shields.io/github/repo-size/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App) 
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
 ![GitHub issues](https://img.shields.io/github/issues/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
@@ -44,6 +43,16 @@ This application is created using :bookmark_tabs: :
 ## Documentation
 
 You can find the Cryptocurrency Price Dashboard documentation [on the website](https://creativerusbear.github.io/Cryptocurrency-Pice-Dashboard-App/).
+
+### Changelog
+
+Detailed changes for each release are documented in the [release notes](CHANGELOG.md).
+
+### Contributing
+
+I'm thanks all the people, that who contributed or who want to contribute to "Cryptocurrency Price Dashboard " project.
+
+If you want to contribute, make sure to read the [Contributing Guide](CONTRIBUTING.md) before making a pull request, thanks.
 
 ## Conclusion
 
