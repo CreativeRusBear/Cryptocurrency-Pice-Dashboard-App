@@ -50,7 +50,7 @@ Detailed changes for each release are documented in the [release notes](CHANGELO
 
 ## Contributing
 
-I'm thanks all the people, that who contributed or who want to contribute to "Cryptocurrency Price Dashboard " project.
+I'm thanks all the people, that who contributed or who want to contribute to "Cryptocurrency Price Dashboard" project.
 
 If you want to contribute, make sure to read the [Contributing Guide](CONTRIBUTING.md) before making a pull request, thanks.
 
