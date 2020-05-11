@@ -7,7 +7,6 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/CreativeRusBear/Cryptocurrency-Pice-Dashboard-App)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fcreativerusbear.github.io%2FCryptocurrency-Pice-Dashboard-App%2F)
 
 ## Introduction
 
