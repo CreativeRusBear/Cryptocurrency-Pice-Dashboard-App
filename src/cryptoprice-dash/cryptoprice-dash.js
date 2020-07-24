@@ -1,6 +1,6 @@
 /**
  * @version v1.1.0
- * @author Artem Gusev <gusev2014russia@mail.ru> (CreativeRusBear)
+ * @author Artem Gusev <gusev2014russia@mail.ru> (corocoto)
  * @copyright Artem Gusev 2020
  */
 
